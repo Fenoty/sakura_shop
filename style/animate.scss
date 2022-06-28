@@ -1,0 +1,140 @@
+.container {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .slider__container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .slider__items {
+    counter-reset: slide;
+  }
+
+  .slider__item {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    counter-increment: slide;
+    height: calc((100vw / 18) * 9);
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  .slider__item::before {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #fff;
+    font-size: 32px;
+    font-weight: bold;
+    display: block;
+  }
+
+  .slider__item:nth-child(1) {
+    background-image: url("../img/slider/Gortenzia.jpg");
+    background-size: 100vw;
+  }
+
+  .slider__item:nth-child(2) {
+    background-image: url("../img/slider/Roses.jpg");
+    background-size: 100vw;
+  }
+
+  .slider__item:nth-child(3) {
+    background-image: url("../img/slider/bonsai2.jpg");
+    background-size: 100vw;
+  }
+
+  .slider__item:nth-child(4) {
+    background-image: url("../img/slider/compozitsia.jpg");
+    background-size: 100vw;
+  }
+
+  .slider__item:nth-child(5) {
+    background-image: url("../img/slider/bluerose.jpg");
+    background-size: 100vw;
+  }
+  .top-left {
+    position: absolute;
+    
+    top: 1em;
+    left: 1em;
+    color: white;
+    font: 4em "Century Gothic", Arial, sans-serif;
+}
+.centered{
+    min-width: 10em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font: 5em "Century Gothic", Arial, sans-serif;
+    color: white;
+    font-size: calc(2em + 5vw);
+    text-align: center;
+    font-weight:600;
+}
+.button-slider{
+    text-decoration: none;
+    cursor: pointer;
+    font-size: calc(0.4em + 2vw);
+    border: 4px solid rgba(251, 205, 207, 1);
+    border-radius: 0em;
+    color: rgba(251, 205, 207, 1);
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    padding: 0.1em 0.2em;
+    margin: 0.4em auto;
+    transition:0.5s;
+    display: inline-block;
+    &:hover{
+        letter-spacing: 0.4em;
+        transition:0.5s;
+    }
+}
+
+.top-left{
+    min-width: 10em;
+    position: absolute;
+    top: 1%;
+    left: 1%;
+    font: 5em "Century Gothic", Arial, sans-serif;
+    color: white;
+    font-size: calc(1em + 5vw);
+    
+    font-weight: 600;
+}
+.about{
+    font-size: calc(0.1em + 2vw);
+}
+#icons{
+    td{
+        padding: 1em 0.3em;
+        a{
+            font-family: "Century Gothic", Arial, sans-serif;
+            font-weight: 200;
+            letter-spacing: 0.1em;
+            color: white;
+        }
+    }
+    img{
+        height: 2.5em;    
+        
+    }
+    
+}
+@media screen and (max-width: 800px) {
+  .centered{
+    font-size: 2em;
+  }
+  #icons{
+    td{
+      padding: 0.5em 0.3em;
+    }
+  }
+}
